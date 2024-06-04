@@ -21,7 +21,7 @@ spec:
         - containerPort: 8080  # 예시 포트, 필요에 따라 변경
         volumeMounts:
         - name: login-storage
-          mountPath: /data  # PVC를 마운트할 경로
+          mountPath: /app  # PVC를 마운트할 경로
       volumes:
       - name: login-storage
         persistentVolumeClaim:
