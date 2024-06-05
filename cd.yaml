@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: login
-        image: feed1119/panda-login:720066b64d26dbff1d0bb3a0c66f429609f9f1ab
+        image: feed1119/panda-login:8a95d5921bb895b2dd3be6f52e75c9bcb47f3090
         ports:
         - containerPort: 8080  # 예시 포트, 필요에 따라 변경
         volumeMounts:
