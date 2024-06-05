@@ -35,7 +35,8 @@ metadata:
   name: login-service
 spec:
   selector:
-    app: bidloginports:
+    app: login
+    ports:
     - protocol: TCP
       port: 8084  # 서비스에 노출되는 포트
       targetPort: 8081  # 파드에 포워딩되는 포트
