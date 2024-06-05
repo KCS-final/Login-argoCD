@@ -5,7 +5,7 @@ metadata:
   labels:
     app: login
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: login
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: login
-        image: leeinhong9512/panda-login:720066b64d26dbff1d0bb3a0c66f429609f9f1ab
+        image: feed1119/panda-login:720066b64d26dbff1d0bb3a0c66f429609f9f1ab
         ports:
         - containerPort: 8080  # 예시 포트, 필요에 따라 변경
         volumeMounts:
@@ -26,6 +26,8 @@ spec:
       - name: login-storage
         persistentVolumeClaim:
           claimName: login-pvc  # 위에서 생성한 PVC 이름
+      nodeSelector:
+        worker: was
 ---
 apiVersion: v1
 kind: Service
