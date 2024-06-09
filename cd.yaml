@@ -19,15 +19,10 @@ spec:
         image: feed1119/panda-login:6b763380a49f627aa886816f6062962b2a5271cd
         ports:
         - containerPort: 8081  # 예시 포트, 필요에 따라 변경
-        volumeMounts:
-        - name: login-storage
-          mountPath: /app  # PVC를 마운트할 경로
-      volumes:
-      - name: login-storage
-        persistentVolumeClaim:
-          claimName: login-pvc  # 위에서 생성한 PVC 이름
       nodeSelector:
         worker: web
+
+        
 ---
 apiVersion: v1
 kind: Service
